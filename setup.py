@@ -5,8 +5,8 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name="sentry-feishu",
-    version='1.0',
+    name="sentry_feishu_gsmini",
+    version='1.5',
     author='gsmini',
     author_email='gsmini@sina.cn',
     url='https://github.com/gsmini/sentry-feishu',
@@ -21,7 +21,7 @@ setup(
     packages=find_packages('src'),
     entry_points={
         'sentry.plugins': [
-            'sentry_feishu = sentry_feishu.plugin:FeiShuPlugin'
+            'sentry_feishu_gsmini = sentry_feishu_gsmini.plugin:FeiShuPlugin'
         ]
     },
     classifiers=[

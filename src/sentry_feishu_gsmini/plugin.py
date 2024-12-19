@@ -4,19 +4,19 @@ import json
 import logging
 import requests
 from sentry_plugins.base import CorePluginMixin
-
+from sentry.plugins.bases.issue2 import IssuePlugin2
 from .forms import FeiShuOptionsForm
 
 logger = logging.getLogger(__name__)
 
 
-class FeiShuPlugin(CorePluginMixin):
+class FeiShuPlugin(CorePluginMixin,IssuePlugin2):
     """
     Sentry plugin to send error counts to FeiShu.
     """
     author = 'gsmini'
     author_url = 'https://github.com/gsmini/sentry-feishu'
-    version = "1.0"
+    version = "1.5"
     description = 'Send error counts to FeiShu.'
     resource_links = [
         ('Source', 'https://github.com/gsmini/sentry-feishu'),
