@@ -19,7 +19,7 @@ enhance-image.sh 内容如下
 ```shell
 #!/bin/bash
 set -euo pipefail
-pip install sentry_feishu_gsmini=1.14 # 安装插件pip包
+pip install sentry_feishu_gsmini=1.15 # 安装插件pip包
 
 ```
 > 官方说明： https://develop.sentry.dev/self-hosted/#enhance-sentry-image
