@@ -168,15 +168,19 @@ class FeiShuPlugin(CorePluginMixin, IssuePlugin2):
 
         try:
             resp = requests.post(
-                url=send_url,
-                headers={"Content-Type": "application/json"},
+                url=send_url,headers={"Content-Type": "application/json"},
                 data=json.dumps(data).encode("utf-8"),
                 timeout=10
             )
             if resp.status_code != 200:
                 logger.info(f"request uri {send_url} status !=200")
                 logger.info(f"request uri {send_url} response:{resp.text} ")
+
         except requests.exceptions.Timeout:
             logger.info(f"feishu request uri {send_url} timeout")
+
+        except Exception as e:
+            logger.info(f"feishu request uri {send_url}  err {e}")
+
         finally:
             logger.info(f"process notify feishu job finish.")
