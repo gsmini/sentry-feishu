@@ -29,7 +29,7 @@ class FeiShuPlugin(CorePluginMixin, IssuePlugin2):
     author_url = "https://github.com/gsmini/sentry-feishu"
     slug = "feishu"
     title = "飞书群聊机器人通知插件"
-    version = "1.14"
+    version = "1.15"
     conf_title = title
     conf_key = "feishu"
     required_field = "webhook_url"

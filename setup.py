@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="sentry_feishu_gsmini",
-    version='1.14',
+    version='1.15',
     author='gsmini',
     author_email='gsmini@sina.cn',
     url='https://github.com/gsmini/sentry-feishu',
